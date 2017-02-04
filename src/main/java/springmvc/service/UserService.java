@@ -1,26 +1,13 @@
 package springmvc.service;
 
-import springmvc.model.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import springmvc.model.UserDTO;
 
-import java.util.List;
+import java.util.Optional;
 
+public interface UserService extends UserDetailsService {
 
-public interface UserService {
+    Optional<UserDTO> findOne(Long id);
 
-	User findById(long id);
-
-	User findByName(String name);
-
-	void saveUser(User user);
-
-	void updateUser(User user);
-
-	void deleteUserById(long id);
-
-	List<User> findAllUsers();
-
-	void deleteAllUsers();
-
-	public boolean isUserExist(User user);
-
+    Optional<UserDTO> findMe();
 }
