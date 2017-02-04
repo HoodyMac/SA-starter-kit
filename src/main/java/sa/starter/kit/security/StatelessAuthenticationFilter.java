@@ -1,4 +1,4 @@
-package springmvc.security;
+package sa.starter.kit.security;
 
 import io.jsonwebtoken.JwtException;
 import org.springframework.security.core.Authentication;

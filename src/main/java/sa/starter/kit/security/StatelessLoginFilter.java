@@ -1,4 +1,4 @@
-package springmvc.security;
+package sa.starter.kit.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -8,8 +8,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter;
-import springmvc.model.UserParams;
-import springmvc.service.UserService;
+import sa.starter.kit.user.model.UserParams;
+import sa.starter.kit.user.service.UserService;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

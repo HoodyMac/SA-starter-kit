@@ -1,4 +1,4 @@
-package springmvc.model;
+package sa.starter.kit.user.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -25,10 +25,6 @@ public class UserAccount implements UserDetails {
 
     @NotNull
     private String password;
-
-    @NotNull
-    @Size(min = 3, max = 30)
-    private String name;
 
     @Override
     @JsonProperty("username")
@@ -87,13 +83,5 @@ public class UserAccount implements UserDetails {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }

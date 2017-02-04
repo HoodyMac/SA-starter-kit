@@ -1,4 +1,4 @@
-package springmvc.security;
+package sa.starter.kit.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;

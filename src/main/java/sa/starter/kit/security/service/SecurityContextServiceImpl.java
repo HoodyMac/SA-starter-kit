@@ -1,11 +1,11 @@
-package springmvc.security.service;
+package sa.starter.kit.security.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
-import springmvc.model.UserAccount;
-import springmvc.service.UserRepository;
+import sa.starter.kit.user.domain.UserAccount;
+import sa.starter.kit.user.repository.UserRepository;
 
 import java.util.Optional;
 

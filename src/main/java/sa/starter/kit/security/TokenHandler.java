@@ -1,4 +1,4 @@
-package springmvc.security;
+package sa.starter.kit.security;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
-import springmvc.service.UserService;
+import sa.starter.kit.user.service.UserService;
 
 import java.time.ZonedDateTime;
 import java.util.Date;

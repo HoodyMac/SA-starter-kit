@@ -1,4 +1,4 @@
-package springmvc.security;
+package sa.starter.kit.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -13,7 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import springmvc.service.UserService;
+import sa.starter.kit.user.service.UserService;
 
 @Configuration
 @EnableWebSecurity
@@ -33,15 +33,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.csrf().disable();
-		http
-				.exceptionHandling().and()
+		http.exceptionHandling().and()
 				.anonymous().and()
 				.servletApi().and()
 				.headers().cacheControl();
 
 		http.authorizeRequests()
-				.antMatchers(HttpMethod.GET, "/users").hasRole("USER");
-
+				.antMatchers(HttpMethod.GET, "/api/users/**").hasRole("USER");
 
 		http.addFilterBefore(
 				new StatelessLoginFilter(

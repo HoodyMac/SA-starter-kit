@@ -1,13 +1,14 @@
-package springmvc.service;
+package sa.starter.kit.user.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AccountStatusUserDetailsChecker;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import springmvc.model.UserAccount;
-import springmvc.model.UserDTO;
-import springmvc.security.service.SecurityContextService;
+import sa.starter.kit.user.domain.UserAccount;
+import sa.starter.kit.user.model.UserDTO;
+import sa.starter.kit.security.service.SecurityContextService;
+import sa.starter.kit.user.repository.UserRepository;
 
 import java.util.Optional;
 

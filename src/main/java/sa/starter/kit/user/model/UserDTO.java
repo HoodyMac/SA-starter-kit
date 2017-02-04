@@ -1,14 +1,16 @@
-package springmvc.model;
+package sa.starter.kit.user.model;
+
+import sa.starter.kit.user.domain.UserAccount;
 
 public class UserDTO {
 
     private final UserAccount user;
 
+    private Boolean isMyself = null;
+
     public UserDTO(UserAccount user) {
         this.user = user;
     }
-
-    private Boolean isMyself = null;
 
     public long getId() {
         return user.getId();
@@ -16,10 +18,6 @@ public class UserDTO {
 
     public String getUsername() {
         return user.getUsername();
-    }
-
-    public String getName() {
-        return user.getName();
     }
 
     public Boolean getMyself() {

@@ -1,7 +1,7 @@
-package springmvc.service;
+package sa.starter.kit.user.service;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
-import springmvc.model.UserDTO;
+import sa.starter.kit.user.model.UserDTO;
 
 import java.util.Optional;
 

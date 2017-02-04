@@ -1,19 +1,19 @@
-package springmvc.controller;
+package sa.starter.kit.user.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import springmvc.model.UserAccount;
-import springmvc.model.UserDTO;
-import springmvc.model.UserParams;
-import springmvc.service.UserRepository;
-import springmvc.service.UserService;
+import sa.starter.kit.user.domain.UserAccount;
+import sa.starter.kit.user.model.UserDTO;
+import sa.starter.kit.user.model.UserParams;
+import sa.starter.kit.user.repository.UserRepository;
+import sa.starter.kit.user.service.UserService;
 
 import javax.validation.Valid;
 
 @RestController
-    @RequestMapping("/api/users")
+@RequestMapping("/api/users")
 public class UserController {
 
     @Autowired

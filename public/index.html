@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="saApp" ng-cloak>
+<head>
+    <meta charset="UTF-8">
+    <title>SA-starter-kit</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+</head>
+<body  ng-controller="MainCtrl">
+<div>
+    <form>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" ng-model="userForm.username"><br/>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" ng-model="userForm.password"><br/>
+        <input type="submit" value="Sign Up" ng-click="signUp()">
+        <input type="submit" value="Sign In" ng-click="signIn()">
+        <input type="submit" value="Sign Out" ng-click="signOut()">
+    </form>
+
+    <hr>
+
+    <div ng-if="isSignedIn">
+        <p>Your id is {{user.id}}</p>
+        <p>Your username is {{user.username}}</p>
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
